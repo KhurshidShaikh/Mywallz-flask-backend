@@ -1,9 +1,11 @@
-from flask import Flask,request,jsonify,send_file
+from flask import Flask,request,jsonify
 import os
 import requests
-from io import BytesIO
 from flask_cors import CORS
 import base64
+
+
+
 
 app=Flask(__name__)
 CORS(app)
@@ -136,10 +138,6 @@ def generate_image():
     except Exception as e:
         print("error occured while generating image",e)
         return jsonify({"error":str(e)}),500
-
-
-
-
 
 
 
