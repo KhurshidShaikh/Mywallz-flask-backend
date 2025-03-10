@@ -4,9 +4,6 @@ import requests
 from flask_cors import CORS
 import base64
 
-
-
-
 app=Flask(__name__)
 CORS(app)
 global urls
@@ -138,6 +135,10 @@ def generate_image():
     except Exception as e:
         print("error occured while generating image",e)
         return jsonify({"error":str(e)}),500
+
+
+
+
 
 
 
