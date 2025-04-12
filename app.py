@@ -22,7 +22,7 @@ def get_images():
     params = {
         'client_id':os.getenv('ACCESS_KEY'),
         'count': 20  ,
-        'page ':page
+        'page':page
     }
     try:
         response=requests.get(url=url,params=params)
